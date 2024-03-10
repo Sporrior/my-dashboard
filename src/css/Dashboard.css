@@ -1,0 +1,31 @@
+.dashboardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3fr 1fr;
+  gap: 20px;
+  height: calc(100vh - 40px);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.largeView {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.view6,
+.view7,
+.view8 {
+  grid-row: 2 / 3;
+}

@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import Profile from "./components/Profile";
+import { useUser } from "./contexts/Users"; // Import the useUser hook
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const { user } = useUser(); // Use the useUser hook to access user information
+
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <button className="nav-toggle" onClick={toggleNav}>
+          {isNavOpen ? "Close" : "Menu"}
+        </button>
+        <nav className={`mainNavigation ${isNavOpen ? "open" : ""}`}>
+          <ul>
+            <li className="nav-user-info">
+              <img src={user.avatarUrl} alt="Profile" className="nav-avatar" />
+              <span>Welcome, {user.name}</span>
+            </li>
+            <li>
+              <Link to="/">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+          </ul>
+        </nav>
+        <main className={`main-content ${isNavOpen ? "shrink" : ""}`}>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
