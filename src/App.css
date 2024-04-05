@@ -1,82 +1,65 @@
 .App {
     display: flex;
-}
-
-.nav-toggle {
-    position: fixed;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.mainNavigation {
-    width: 0;
-    height: 100%;
-    background-color: #113065;
-    overflow-x: hidden;
-    transition: 0.5s;
-    position: fixed;
-    z-index: 1;
-}
-
-.mainNavigation.open {
+  }
+  
+  .nav-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  
+  .mainNavigation {
     width: 200px;
-}
-
-.mainNavigation ul {
+    background-color: #333;
+    color: #fff;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    transition: left 0.3s ease;
+    z-index: 999; /* Ensure the navigation is above the content */
+  }
+  
+  .mainNavigation.open {
+    left: 0;
+  }
+  
+  .mainNavigation ul {
+    list-style-type: none;
     padding: 0;
-    margin: 20px 0 0 20px;
-    list-style: none;
-}
-
-.mainNavigation ul li a {
-    display: block;
-    text-decoration: none;
-    padding: 10px 0;
-    color: #aad6ec
-}
-
-.main-content {
-    margin-left: 0;
-    transition: margin-left 0.5s;
-}
-
-.main-content.expand {
-    margin-left: 150px;
-}
-
-.main-content {
-    transition: margin-left 0.5s, width 0.5s;
-    width: calc(100% - 0px);
-    float: right;
-    background-color: #113065;
-}
-
-.main-content.shrink {
-    margin-left: 150px;
-    width: calc(100% - 150px);
-}
-
-.mainNavigation:not(.open)+.main-content {
-    margin-left: 0;
-    width: 100%;
-}
-
-.nav-user-info {
+  }
+  
+  .mainNavigation ul li {
+    padding: 10px;
+  }
+  
+  .mainNavigation ul li.nav-user-info {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px 0;
-    margin-right: 20px;
-}
-
-.nav-avatar {
-    width: 80px;
-    height: 80px;
+    padding: 20px;
+    border-bottom: 1px solid #555;
+  }
+  
+  .mainNavigation ul li.nav-user-info img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.nav-user-info span {
-    color: #aad6ec;
-    font-size: 16px;
-}
+    margin-right: 10px;
+  }
+  
+  .main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 250vh;
+    transition: margin-left 0.3s ease;
+    z-index: 1;
+    background-color: #2C2549;
+  }
+  
+  .main-content.shrink {
+    margin-left: 200px;
+  }
+  

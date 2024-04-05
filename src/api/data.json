@@ -1,0 +1,6 @@
+{
+    "app": "My Awesome App",
+    "version": "1.0",
+    "description": "This is a simple app to demonstrate serving JSON through an Express server."
+  }
+  
