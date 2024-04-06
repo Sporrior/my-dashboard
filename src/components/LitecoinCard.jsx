@@ -44,7 +44,7 @@ const LitecoinCard = ({ icon, price }) => {
 const App = () => {
   return (
     <div className="App">
-      <LitecoinCard icon={litecoinIcon} price={60000} />
+      <LitecoinCard icon={litecoinIcon} price={54.97} />
     </div>
   );
 };

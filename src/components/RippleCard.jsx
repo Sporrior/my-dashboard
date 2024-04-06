@@ -44,7 +44,7 @@ const RippleCard = ({ icon, price }) => {
 const App = () => {
   return (
     <div className="App">
-      <RippleCard icon={rippleIcon} price={60000} />
+      <RippleCard icon={rippleIcon} price={4.987} />
     </div>
   );
 };

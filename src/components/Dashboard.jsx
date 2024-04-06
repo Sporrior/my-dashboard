@@ -12,10 +12,12 @@ const Dashboard = () => (
     <div className="cardContainer">
       <BitcoinCard />
       <RippleCard />
-      <LitecoinCard />
       <EthereumCard />
+      <LitecoinCard />
+
     </div>
       <div className="statsContainer"><WalletGraph /></div>
+      <div className="test"></div>
     </div>
 );
 
