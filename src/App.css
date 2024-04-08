@@ -11,14 +11,14 @@
   
   .mainNavigation {
     width: 200px;
-    background-color: #333;
+    background-color: #352E5F;
     color: #fff;
     height: 100%;
     position: fixed;
     top: 0;
     left: -200px;
     transition: left 0.3s ease;
-    z-index: 999; /* Ensure the navigation is above the content */
+    z-index: 999; 
   }
   
   .mainNavigation.open {
@@ -53,7 +53,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 250vh;
+    height: 110vh;
     transition: margin-left 0.3s ease;
     z-index: 1;
     background-color: #2C2549;
@@ -63,3 +63,8 @@
     margin-left: 200px;
   }
   
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
