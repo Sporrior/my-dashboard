@@ -1,51 +1,58 @@
 .cryptoContainer {
-    font-family: 'Arial', sans-serif;
-    color: #ffffff;
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-  }
-  
-  .cryptoRow {
-    display: grid;
-    grid-template-columns: auto 1fr repeat(5, auto);
-    gap: 10px;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #333;
-  }
-  
-  .cryptoRank,
-  .cryptoInfo,
-  .cryptoPrice,
-  .cryptoMarketCap,
-  .cryptoVolume,
-  .cryptoLiquidity,
-  .cryptoChart,
-  .cryptoChange {
-    display: flex;
-    align-items: center;
-  }
-  
-  .cryptoIcon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-  }
-  
-  .cryptoName {
-    margin-left: 8px;
-  }
-  
-  .cryptoChangeDirection.up {
-    color: #00ff00;
-  }
-  
-  .cryptoChangeDirection.down {
-    color: #ff0000;
-  }
-  
-  
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  width: 90%;
+  overflow-y: auto;
+  margin-top: 100px;
+  height: 480px;
+  padding: 20px;
+}
+
+.cryptoContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cryptoRow {
+  display: grid;
+  grid-template-columns: auto 1fr repeat(5, auto);
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.cryptoRank,
+.cryptoInfo,
+.cryptoPrice,
+.cryptoMarketCap,
+.cryptoVolume,
+.cryptoLiquidity,
+.cryptoChart,
+.cryptoChange {
+  display: flex;
+  align-items: center;
+}
+
+.cryptoIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.cryptoName {
+  margin-left: 8px;
+}
+
+.cryptoChangeDirection.up {
+  color: #00ff00;
+}
+
+.cryptoChangeDirection.down {
+  color: #ff0000;
+}
+
+.right-side {
+  width: 25%;
+}

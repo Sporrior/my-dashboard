@@ -5,6 +5,8 @@ import BitcoinCard from "./BitcoinCard";
 import RippleCard from "./RippleCard";
 import LitecoinCard from "./LitecoinCard";
 import EthereumCard from "./EthereumCard";
+import CircleDiagram from "./Circlediagram"; 
+import CryptoList from "./Cryptolist";
 
 const Dashboard = () => (
   <div className="dashboardContainer">
@@ -14,11 +16,19 @@ const Dashboard = () => (
       <RippleCard />
       <EthereumCard />
       <LitecoinCard />
-
     </div>
-      <div className="statsContainer"><WalletGraph /></div>
-      <div className="test"></div>
+    <div className="statsContainer">
+      <div className="left-side">
+        <WalletGraph />
+      </div>
+      <div className="middle">
+        <CircleDiagram />
+      </div>
+      <div className="right-side">
+        <CryptoList />
+      </div>
     </div>
+  </div>
 );
 
 export default Dashboard;
