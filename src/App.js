@@ -1,25 +1,19 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Profile from "./components/Profile";
 import { useUser } from "./contexts/Users";
-import Nav from "./components/Navbar";
+import Nav from "./components/Sidebar";
 import "./App.css";
 
 const App = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
   const { user } = useUser();
-
-  const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
     <Router>
       <div className="App">
-        <button className="nav-toggle" onClick={toggleNav}>
-          {isNavOpen ? "Close" : "Menu"}
-        </button>
-        <Nav user={user} isNavOpen={isNavOpen} /> {/* Add the Nav component */}
-        <main className={`main-content ${isNavOpen ? "shrink" : ""}`}>
+        <Nav user={user}/>
+        <main className={"main-content"}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/profile" element={<Profile />} />

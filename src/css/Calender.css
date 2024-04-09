@@ -1,0 +1,96 @@
+/* Calendar container */
+.calendar {
+    display: flex;
+    margin-top: 50px;
+}
+
+.time-axis {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    padding-top: 50px;
+}
+
+.time-marker {
+    margin-bottom: 20px;
+}
+
+.days {
+    display: flex;
+}
+
+.day {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.dateMon {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 260px;
+}
+
+.dateTues {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dateWed {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dateThur {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dateFri {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dateSat {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dateSun {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.events {
+    margin-top: 10px;
+}
+
+.event {
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.time {
+    font-size: 14px;
+    color: #666;
+}

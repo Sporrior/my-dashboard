@@ -43,7 +43,7 @@ const EthereumCard = ({ icon, price }) => {
 const App = () => {
   return (
     <div className="App">
-      <EthereumCard icon={ethereumIcon} price={60000} />
+      <EthereumCard icon={ethereumIcon} price={3.994} />
     </div>
   );
 };

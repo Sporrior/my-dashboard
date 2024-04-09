@@ -1,0 +1,62 @@
+
+.list-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #171925;
+    border-radius: 10px;
+  }
+  
+  .profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .credit-card {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .credit-card img {
+    width: 300px;
+    height: 150px;
+  }
+  
+  .recent-transactions {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .recent-transactions-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .transaction-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .transaction-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+  

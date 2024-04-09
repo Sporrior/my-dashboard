@@ -29,6 +29,8 @@
   font-weight: bold;
   color: white !important;
   text-align: center;
+  margin-top: -45px;
+  margin-bottom: 5px;
 }
 
 .crypto-fluctuation {

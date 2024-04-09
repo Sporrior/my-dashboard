@@ -44,7 +44,7 @@ const BitcoinCard = ({ icon, price }) => {
 const App = () => {
   return (
     <div className="App">
-      <BitcoinCard icon={bitcoinIcon} price={60000} />
+      <BitcoinCard icon={bitcoinIcon} price={63.902} />
     </div>
   );
 };
