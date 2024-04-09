@@ -1,70 +1,24 @@
 .App {
-    display: flex;
-  }
-  
-  .nav-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-  }
-  
-  .mainNavigation {
-    width: 200px;
-    background-color: #352E5F;
-    color: #fff;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: -200px;
-    transition: left 0.3s ease;
-    z-index: 999; 
-  }
-  
-  .mainNavigation.open {
-    left: 0;
-  }
-  
-  .mainNavigation ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .mainNavigation ul li {
-    padding: 10px;
-  }
-  
-  .mainNavigation ul li.nav-user-info {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #555;
-  }
-  
-  .mainNavigation ul li.nav-user-info img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .main-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 110vh;
-    transition: margin-left 0.3s ease;
-    z-index: 1;
-    background-color: #2C2549;
-  }
-  
-  .main-content.shrink {
-    margin-left: 200px;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
+  display: flex;
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 110vh;
+  transition: margin-left 0.3s ease;
+  z-index: 1;
+  background-color: #171925;
+}
+
+.main-content.shrink {
+  margin-left: 200px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

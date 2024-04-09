@@ -1,34 +1,64 @@
 import React from "react";
 import "../css/Dashboard.css";
-import WalletGraph from "./Walletgraph";
-import BitcoinCard from "./BitcoinCard";
-import RippleCard from "./RippleCard";
-import LitecoinCard from "./LitecoinCard";
-import EthereumCard from "./EthereumCard";
-import CircleDiagram from "./Circlediagram"; 
-import CryptoList from "./Cryptolist";
+import CircleDiagram from "./Circlediagram";
+import Sidebar from "./Sidebar";
+import FinanceSection from "./Purchases";
+import Calendar from "./Calender";
+import Profile from "../icons/jon-doe.png"
 
-const Dashboard = () => (
-  <div className="dashboardContainer">
-    <div className="dashboardTitle">Dashboard</div>
-    <div className="cardContainer">
-      <BitcoinCard />
-      <RippleCard />
-      <EthereumCard />
-      <LitecoinCard />
+const Dashboard = () => {
+  const generateRandomEuroAmount = () => {
+    return (Math.random() * 10000).toFixed(2);
+  };
+
+  return (
+    <div className="dashboardContainer">
+      <header className="dashboardHeader">
+        <div className="dashboardTitle">Dashboard</div>
+        <div className="searchBarWrapper">
+          <input type="text" className="searchBar" placeholder="Search..." />
+        </div>
+        <div className="profileDropdown">
+          <img
+            src={Profile}
+            alt="Profile"
+            className="profilePic"
+          />
+        </div>
+        <div className="iconsContainer">
+          <div className="icon">Messages</div>
+          <div className="icon">Mail</div>
+        </div>
+      </header>
+
+      <div className="dashboardBody">
+        <Sidebar />
+        <div className="mainContent" style={{ flex: "80%", color: "white" }}>
+          <div className="walletcontainer">
+            <div>
+              <h3>Total Income</h3>
+              <div className="geld">€ {generateRandomEuroAmount()}</div>
+            </div>
+            <CircleDiagram percentage={44} />
+            <div>
+              <h3>Total Expenses</h3>
+              <div className="geld">€ {generateRandomEuroAmount()}</div>
+            </div>
+            <CircleDiagram percentage={26} />
+            <div>
+              <h3>Total Bonus</h3>
+              <div className="geld">€ {generateRandomEuroAmount()}</div>
+            </div>
+            <CircleDiagram percentage={30} />
+          </div>
+          <Calendar />
+        </div>
+        <div className="sideContent" style={{ flex: "20%" }}>
+          <FinanceSection />
+        </div>
+      </div>
     </div>
-    <div className="statsContainer">
-      <div className="left-side">
-        <WalletGraph />
-      </div>
-      <div className="middle">
-        <CircleDiagram />
-      </div>
-      <div className="right-side">
-        <CryptoList />
-      </div>
-    </div>
-  </div>
-);
+  );
+};
 
 export default Dashboard;
