@@ -1,9 +1,10 @@
 .app-sidebar {
-  padding: 40px 15px;
+  padding-left: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  height: 100vh;
+  justify-content: center;
 
 }
 .app-sidebar-link {
@@ -22,8 +23,4 @@
 .app-sidebar-link:hover {
   background-color: grey;
   color: white;
-}
-.app-sidebar-link.active {
-  background-color: white;
-  color: grey;
 }

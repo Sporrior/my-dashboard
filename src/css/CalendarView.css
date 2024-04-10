@@ -1,0 +1,70 @@
+.CalendarContainer {
+  padding: 20px;
+  background-color: #171925;
+  width: 89%;
+  }
+
+  .CalendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #171925;
+  }
+  
+  .CalendarTitle {
+    font-size: 31px;
+    color: white;
+    font-weight: bold;
+    flex: 1;
+  }
+  
+  .searchBarWrapper {
+    flex: 1;
+  }
+  
+  .profileDropdown,
+  .iconsContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profileDropdown {
+    margin-right: 20px;
+  }
+  
+  .iconsContainer {
+    margin-left: 20px;
+  }
+  
+  .profilePic {
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .dropdownContent {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+  }
+  
+  .profileDropdown:hover .dropdownContent {
+    display: block;
+  }
+  
+  .icon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+  }
+
+  h2 {
+    color: white;
+  }
+

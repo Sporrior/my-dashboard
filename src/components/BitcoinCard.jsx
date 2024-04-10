@@ -41,7 +41,7 @@ const BitcoinCard = ({ icon, price }) => {
   );
 };
 
-const App = () => {
+const Bitcoinapp = () => {
   return (
     <div className="App">
       <BitcoinCard icon={bitcoinIcon} price={63.902} />
@@ -49,4 +49,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Bitcoinapp;

@@ -1,6 +1,6 @@
 .messages-section {
     flex-shrink: 0;
-    padding-bottom: 32px;
+    padding: 30px;
     background-color: white;
     flex: 1;
     width: 100%;
@@ -31,13 +31,13 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    padding: 32px 24px 0 24px;
+    padding: 32px 24px 0 14px;
     background-color: white;
 }
 
 .message-box {
     border-top: 1px solid var(--message-box-border);
-    padding: 16px;
+    padding-top: 16px;
     display: flex;
     align-items: flex-start;
     width: 100%;

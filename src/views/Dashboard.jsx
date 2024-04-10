@@ -1,9 +1,8 @@
 import React from "react";
 import "../css/Dashboard.css";
-import CircleDiagram from "./Circlediagram";
-import Sidebar from "./Sidebar";
-import FinanceSection from "./Purchases";
-import Calendar from "./Calender";
+import CircleDiagram from "../components/Circlediagram";
+import FinanceSection from "../components/Purchases";
+import BitcoinCard from "../components/BitcoinCard";
 import Profile from "../icons/jon-doe.png"
 
 const Dashboard = () => {
@@ -32,7 +31,6 @@ const Dashboard = () => {
       </header>
 
       <div className="dashboardBody">
-        <Sidebar />
         <div className="mainContent" style={{ flex: "80%", color: "white" }}>
           <div className="walletcontainer">
             <div>
@@ -51,7 +49,7 @@ const Dashboard = () => {
             </div>
             <CircleDiagram percentage={30} />
           </div>
-          <Calendar />
+          <BitcoinCard />
         </div>
         <div className="sideContent" style={{ flex: "20%" }}>
           <FinanceSection />
