@@ -1,33 +1,34 @@
 .cryptoContainer {
-  color: black;
-  background-color: white;
-  border-radius: 8px;
-  width: 100%;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  height: 350px;
   overflow-y: auto;
   padding: 20px;
 }
 
-.cryptoContainer::-webkit-scrollbar {
-  display: none;
+.Cryptolistheader {
+  display: flex;
+  justify-content: space-around;
 }
 
 .cryptoRow {
-  display: grid;
-  grid-template-columns: auto 1fr repeat(5, auto);
-  gap: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #333;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
 }
 
-.cryptoRank,
+.cryptoRank {
+  flex-basis: auto; /* Allow content to determine width */
+  margin-right: 10px; /* Add space between rank and info */
+}
+
 .cryptoInfo,
 .cryptoPrice,
-.cryptoMarketCap,
-.cryptoVolume,
-.cryptoLiquidity,
-.cryptoChart,
-.cryptoChange {
+.cryptoMarketCap {
+  flex: 1; /* Grow to fill available space */
   display: flex;
   align-items: center;
 }
@@ -36,24 +37,31 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 
 .cryptoName {
-  margin-left: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
-.cryptoChangeDirection.up {
-  color: #00ff00;
+.cryptoPrice,
+.cryptoMarketCap {
+  font-size: 1.1rem;
+  margin-left: 25px;
 }
 
-.cryptoChangeDirection.down {
-  color: #ff0000;
+.price-up {
+  color: #00cc66; /* Green color for price increase */
 }
 
-.right-side {
-  width: 25%;
+.price-down {
+  color: #ff6666; /* Red color for price decrease */
 }
 
 h3 {
   color: black;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
 }
+

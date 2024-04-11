@@ -2,7 +2,6 @@ import React from "react";
 import "../css/Dashboard.css";
 import CircleDiagram from "../components/Circlediagram";
 import FinanceSection from "../components/Purchases";
-import BitcoinCard from "../components/BitcoinCard";
 import Profile from "../icons/jon-doe.png"
 
 const Dashboard = () => {
@@ -49,7 +48,6 @@ const Dashboard = () => {
             </div>
             <CircleDiagram percentage={30} />
           </div>
-          <BitcoinCard />
         </div>
         <div className="sideContent" style={{ flex: "20%" }}>
           <FinanceSection />

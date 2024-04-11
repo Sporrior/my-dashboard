@@ -7,18 +7,28 @@ const CryptoList = () => {
 
   useEffect(() => {
     const getCryptos = async () => {
-      const cryptoData = await fetchCryptos();
-      setCryptos(cryptoData.slice(0, 11));
+      try {
+        const cryptoData = await fetchCryptos();
+        setCryptos(cryptoData);
+      } catch (error) {
+        console.error("Error fetching cryptocurrencies:", error);
+      }
     };
 
     getCryptos();
+
+    const intervalId = setInterval(getCryptos, 300);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
     <div className="cryptoContainer">
-      <h3>Market Cap</h3>
+      <div className="Cryptolistheader">
+        <h3>Coins</h3>
+      </div>
       {cryptos.map((crypto) => (
-        <div key={crypto.id} className="cryptoRow">
+        <div key={crypto.symbol} className="cryptoRow">
           <div className="cryptoRank">{crypto.rank}</div>
           <div className="cryptoInfo">
             <img
@@ -30,18 +40,10 @@ const CryptoList = () => {
               {crypto.name} ({crypto.symbol})
             </div>
           </div>
-          <div className="cryptoPrice">
-            {crypto.priceUsd && `$${Number(crypto.priceUsd).toFixed(2)}`}
-          </div>
-          <div className="cryptoChange">
-            {crypto.changePercent24Hr &&
-              `${Number(crypto.changePercent24Hr).toFixed(2)}%`}
-          </div>
         </div>
       ))}
     </div>
   );
-  
 };
 
 export default CryptoList;

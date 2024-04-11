@@ -50,14 +50,26 @@
 }
 
 h2 {
-    color: white;
+    color: black;
 }
 
 
 .WalletBody {
     display: flex;
+    padding: 20px;
+    margin-top: 50px;
 }
 
-.mainContent {
+.sidecontentwallet {
+    margin-left: 20px;
+}
+
+.maincontentwallet {
     padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.footercontenwallet {
+    background-color: #ccc;
 }
