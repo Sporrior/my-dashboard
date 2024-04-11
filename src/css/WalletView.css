@@ -1,0 +1,63 @@
+.WalletContainer {
+    padding: 20px;
+    background-color: #171925;
+    width: 89%;
+}
+
+.WalletHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #171925;
+}
+
+.WalletTitle {
+    font-size: 31px;
+    color: white;
+    font-weight: bold;
+    flex: 1;
+}
+
+.searchBarWrapper {
+    flex: 1;
+}
+
+.profileDropdown,
+.iconsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.profileDropdown {
+    margin-right: 20px;
+}
+
+.iconsContainer {
+    margin-left: 20px;
+}
+
+.profilePic {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.icon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+
+.WalletBody {
+    display: flex;
+}
+
+.mainContent {
+    padding: 20px;
+}

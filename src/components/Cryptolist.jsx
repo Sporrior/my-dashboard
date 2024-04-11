@@ -16,6 +16,7 @@ const CryptoList = () => {
 
   return (
     <div className="cryptoContainer">
+      <h3>Market Cap</h3>
       {cryptos.map((crypto) => (
         <div key={crypto.id} className="cryptoRow">
           <div className="cryptoRank">{crypto.rank}</div>
@@ -40,6 +41,7 @@ const CryptoList = () => {
       ))}
     </div>
   );
+  
 };
 
 export default CryptoList;

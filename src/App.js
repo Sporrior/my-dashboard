@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./views/Dashboard";
 import CalendarView from "./views/CalendarView";
+import WalletView from "./views/WalletView";
 import "./App.css";
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
       <Sidebar />
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/WalletView" element={<WalletView />} />
         <Route path="/CalendarView" element={<CalendarView />} />
         <Route path="/" element={<Dashboard />} />
       </Routes>

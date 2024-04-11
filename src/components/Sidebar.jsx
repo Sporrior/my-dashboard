@@ -21,7 +21,7 @@ const Sidebar = () => {
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
       </Link>
-      <Link to="/Dashboard" className="app-sidebar-link">
+      <Link to="/WalletView" className="app-sidebar-link">
         <svg
           className="link-icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const Sidebar = () => {
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
       </Link>
-      <Link to="/Settings" className="app-sidebar-link">
+      <Link to="/SettingsView" className="app-sidebar-link">
         <svg
           className="link-icon"
           xmlns="http://www.w3.org/2000/svg"
