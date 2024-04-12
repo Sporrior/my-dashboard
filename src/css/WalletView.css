@@ -1,7 +1,7 @@
 .WalletContainer {
     padding: 20px;
     background-color: #171925;
-    width: 89%;
+    width: 90vw;
 }
 
 .WalletHeader {
@@ -60,16 +60,16 @@ h2 {
     margin-top: 50px;
 }
 
+.maincontentwallet {
+    padding: 20px;
+    background-color: white;
+}
+
 .sidecontentwallet {
     margin-left: 20px;
 }
 
-.maincontentwallet {
-    padding: 20px;
-    background-color: white;
-    border-radius: 20px;
-}
 
 .footercontenwallet {
-    background-color: #ccc;
+    background-color: #171925;
 }

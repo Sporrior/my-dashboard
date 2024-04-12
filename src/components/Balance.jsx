@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/Balance.css";
+
 const Balance = () => {
   const [balance, setBalance] = useState(1000000);
 
@@ -17,10 +18,19 @@ const Balance = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const formatBalance = (balance) => {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(balance);
+  };
+
   return (
-    <div className="Balance">
-      <h3>Total Balance</h3>
-      <h3>${balance.toLocaleString()}</h3>
+    <div className="balance-card">
+      <div className="balance-header">
+        <h3>Total Balance</h3>
+      </div>
+      <div className="balance-amount">{formatBalance(balance)}</div>
     </div>
   );
 };

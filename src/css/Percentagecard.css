@@ -1,0 +1,22 @@
+.percentage-card {
+    background-color: indianred;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.percentage-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.percentage-amount {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #50C878;
+}

@@ -17,7 +17,7 @@ const CryptoList = () => {
 
     getCryptos();
 
-    const intervalId = setInterval(getCryptos, 300);
+    const intervalId = setInterval(getCryptos, 30000);
 
     return () => clearInterval(intervalId);
   }, []);

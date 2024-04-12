@@ -1,7 +1,7 @@
 .dashboardContainer {
   padding: 20px;
   background-color: #171925;
-  width: 89%;
+  width: 90vw;
 }
 
 .dashboardHeader {
@@ -67,28 +67,30 @@
 
 .dashboardBody {
   display: flex;
+  padding: 20px;
   margin-top: 50px;
 }
 
-.mainContent {
+.maincontentdashboard {
   background-color: #171925;
   padding: 20px;
 }
 
-.sideContent {
-  background-color: #171925;
+.sidecontentdashboard {
+  margin-left: 20px;
+  border-radius: 20px;
   margin-top: 20px;
 }
 
-
-.walletcontainer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 150px;
+.footercontentdashboard {
   background-color: white;
-  border-radius: 20px;
-  padding: 20px;
+}
+
+.balancecontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
 }
 
 h3 {
