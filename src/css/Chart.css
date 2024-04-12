@@ -1,0 +1,20 @@
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .chart {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .chart h3 {
+    color: white;
+    text-align: center;
+  }
+
+  .tv-lightweight-charts {
+    border-radius: 20px;
+  }

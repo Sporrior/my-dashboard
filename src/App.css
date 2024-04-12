@@ -1,20 +1,28 @@
 .App {
+  position: relative;
   display: flex;
+  background-color: #171925;
+  width: 100vw;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5vw;
+  height: 100%;
+  background-color: #1f2532;
+  z-index: 2;
 }
 
 .main-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 110vh;
+  margin-left: 200px;
+  width: calc(100% - 200px);
+  height: 100vh;
   transition: margin-left 0.3s ease;
   z-index: 1;
   background-color: #171925;
-}
-
-.main-content.shrink {
-  margin-left: 200px;
+  overflow-x: hidden;
 }
 
 a {

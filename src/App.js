@@ -1,26 +1,22 @@
-// import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Profile from "./components/Profile";
-import { useUser } from "./contexts/Users";
-import Nav from "./components/Sidebar";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import Routes from react-router-dom
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./views/Dashboard";
+import CalendarView from "./views/CalendarView";
+import WalletView from "./views/WalletView";
 import "./App.css";
 
 const App = () => {
-  const { user } = useUser();
-
   return (
-    <Router>
-      <div className="App">
-        <Nav user={user}/>
-        <main className={"main-content"}>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <div className="App">
+      <Sidebar />
+      <Routes>
+        <Route exact path="/" element={<Dashboard />} />
+        <Route path="/WalletView" element={<WalletView />} />
+        <Route path="/CalendarView" element={<CalendarView />} />
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </div>
   );
 };
 
