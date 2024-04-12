@@ -72,10 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-if React-Crypto-Chart doesn't install use:
+### if React-Crypto-Chart doesn't install use:
 
-###npm cache clean --force
+### `npm cache clean --force`
 
-### npm install react-crypto-chart --force
+### `npm install react-crypto-chart --force`
 
 
